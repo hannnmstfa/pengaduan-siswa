@@ -20,6 +20,7 @@
     "dependencies": {
         "@tailwindcss/postcss7-compat": "^2.0.2",
         "autoprefixer": "^9.8.6",
+        "flowbite": "^4.0.2",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
     }
 }
