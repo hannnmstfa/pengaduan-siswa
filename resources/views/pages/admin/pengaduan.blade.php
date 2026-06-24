@@ -23,7 +23,7 @@
     <div class="title text-center mb-5">
       <h2>Laporan Layanan Pengaduan Online</h2>
     </div>
-    <table class="table table-bordered">
+    <table id="myTable" class="table table-bordered">
       <thead class="thead">
         <tr>
           <th scope="col">No</th>
