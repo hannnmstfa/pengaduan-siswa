@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html :class="{ 'theme-dark': dark }" x-data="data()" lang="id">
+<html :class="{ dark: dark }" x-data="data()" lang="id">
 
 <head>
   <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
   @include('includes.admin.style')
 </head>
 
-<body class="dark">
+<body>
   <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
     @include('includes.admin.sidebar')
     <div class="flex flex-col flex-1 w-full">

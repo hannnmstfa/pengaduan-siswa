@@ -16,11 +16,23 @@ function data() {
     window.localStorage.setItem('dark', value)
   }
 
+  function updateHtmlClass(isDark) {
+    if (isDark) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }
+
+  const initialDark = getThemeFromLocalStorage()
+  updateHtmlClass(initialDark)
+
   return {
-    dark: getThemeFromLocalStorage(),
+    dark: initialDark,
     toggleTheme() {
       this.dark = !this.dark
       setThemeToLocalStorage(this.dark)
+      updateHtmlClass(this.dark)
     },
     isSideMenuOpen: false,
     toggleSideMenu() {

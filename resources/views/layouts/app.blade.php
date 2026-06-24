@@ -8,6 +8,7 @@
 
   @stack('prepend-style')
   @include('includes.admin.style')
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
   @stack('addon-style')
 
 </head>
