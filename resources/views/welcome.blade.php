@@ -40,7 +40,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">Layanan Laporan Siswa Berbasis Onlineee</h1>
+          <h1 data-aos="fade-up">Layanan Laporan Siswa Berbasis Onlinen</h1>
           <h2 data-aos="fade-up" data-aos-delay="400">Sampaikan laporan masalah Anda di sini, kami akan memprosesnya
             dengan cepat , aman dan nyaman.</h2>
           <div data-aos="fade-up" data-aos-delay="800">
