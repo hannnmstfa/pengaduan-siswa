@@ -35,12 +35,16 @@ Dashboard
             rows="8" type="text" placeholder="Isi laporan Anda dan sertakan lokasi dengan jelas" value="{{ old('description')}}"
             name="description"></textarea>
         </label>
-
+        <label for="jenis" class="text-gray-700 dark:text-gray-400 block mt-4 text-sm">Jenis Laporan</label>
+        <select name="jenis" id="jenis" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:text-gray-300 dark:focus:shadow-outline-gray form-input" required>
+        <option value="" selected disabled>-- Pilih Jenis Laporan --</option>  
+        <option value="Sarana dan Prasarana">Sarana dan Prasarana</option>
+        </select>
         <label for="image" class="block mt-4 text-sm">
           <span class="text-gray-700 dark:text-gray-400">Foto</span>
           <input
             class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-            type="file" value="{{ old('image')}}" name="image" />
+            type="file" value="{{ old('image')}}" accept="image/*" name="image" />
         </label>
         <button
         style="width: 100%"

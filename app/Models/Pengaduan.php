@@ -14,7 +14,7 @@ class Pengaduan extends Model
     protected $table = 'pengaduan';
 
     protected $fillable = [
-        'name', 'description', 'image', 'status', 'user_nik', 'user_id'
+        'name', 'description', 'image', 'status', 'jenis', 'user_nik', 'user_id'
     ];
 
     protected $hidden = [

@@ -47,7 +47,8 @@ class MasyarakatController extends Controller
     {
         $request->validate([
         'description' => 'required',
-        'image' => 'required',
+        'jenis' => 'required',
+        'image' => 'required|image',
         ]);
 
         $nik = Auth::user()->nik;
@@ -81,7 +82,7 @@ class MasyarakatController extends Controller
         $user = Auth::user()->nik;
 
 
-        $items = Pengaduan::all();
+        $items = Pengaduan::where('user_nik', $user)->get();
 
         return view('pages.masyarakat.detail', [
             'items' => $items
