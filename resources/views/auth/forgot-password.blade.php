@@ -2,8 +2,9 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <img class="w-20 h-20" src="{{ asset('img/logo.svg')}} " alt="Logo">
+                <img class="w-15 h-20" src="{{ asset('img/logo.png')}} " alt="Logo">
             </a>
+        </x-slot>
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
