@@ -1,10 +1,10 @@
 <x-guest-layout>
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <img class="w-20 h-20" src="{{ asset('img/logo.svg')}} " alt="Logo">
-            </a>
-        </x-slot>
+    <x-slot name="logo">
+        <a href="/">
+            <img class="w-15 h-20" src="{{ asset('img/logo.png')}} " alt="Logo">
+        </a>
+    </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
             {{ __('lupa kata sandi Anda? Tidak masalah. Beri tahu kami alamat email Anda dan kami akan mengirim email kepada Anda tautan reset kata sandi yang memungkinkan Anda memilih yang baru.') }}
