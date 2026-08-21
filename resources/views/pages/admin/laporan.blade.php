@@ -57,7 +57,7 @@
                   </td>
 
                   @if($item->status == 'Belum di Proses')
-                    <td class="px-4 py-3 text-xs">
+                    <td class="px-4 py-3 text-xs text-nowrap">
                       <span
                         class="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-md dark:text-red-100 dark:bg-red-700">
                         {{ $item->status }}
