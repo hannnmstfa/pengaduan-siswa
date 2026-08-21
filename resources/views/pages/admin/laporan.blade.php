@@ -64,16 +64,16 @@
                       </span>
                     </td>
                   @elseif ($item->status == 'Sedang di Proses')
-                    <td class="px-4 py-3 text-xs">
+                    <td class="px-4 py-3 text-xs text-nowrap">
                       <span
-                        class="px-2 py-1 font-semibold leading-tight text-orange-700 bg-orange-100 rounded-md dark:text-white dark:bg-orange-600">
+                        class="px-2 py-1 font-semibold leading-tight text-orange-700 bg-orange-100 rounded-md dark:text-white dark:bg-orange-600 text-nowrap">
                         {{ $item->status }}
                       </span>
                     </td>
                   @else
                     <td class="px-4 py-3 text-xs">
                       <span
-                        class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-md dark:bg-green-700 dark:text-green-100">
+                        class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-md dark:bg-green-700 dark:text-green-100 text-nowrap">
                         {{ $item->status }}
                       </span>
                     </td>
