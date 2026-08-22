@@ -60,6 +60,11 @@
 
             <div class="text-center flex-1">
               <h1 class="mb-8 font-semibold">Tanggapan</h1>
+              @if ($tangap)
+                <div class="w-full flex justify-center items-center">
+                  <img class="w-56 my-3" src="{{ asset($tangap->path_foto ?? '') }}" alt="Foto">
+                </div>
+              @endif
               <p class="text-gray-800 dark:text-gray-400">
                 @if (empty($tangap->tanggapan))
                   Belum ada tanggapan
@@ -72,9 +77,9 @@
         </div>
         <div class="flex justify-center my-4">
           <!-- <a href="{{ url('admin/pengaduan/cetak', $item->id)}}"
-              class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red">
-              Export ke PDF
-            </a>-->
+                  class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red">
+                  Export ke PDF
+                </a>-->
         </div>
         <div class="flex justify-center my-6">
           <a href="{{ route('tanggapan.show', $item->id)}}"
