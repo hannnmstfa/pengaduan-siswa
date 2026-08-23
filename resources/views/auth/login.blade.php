@@ -54,10 +54,7 @@
 
             </div>
             <div class="flex items-center justify-end mt-4">
-                <a class="bg-red-500 text-white font-bold rounded-md my-3 py-2 px-4 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:bg-red-500 hover:scale-105 duration-300 ease-in-out"
-                    href="{{ url('register') }}">
-                    {{ __('Daftar') }}
-                </a>
+                
 
 
 
