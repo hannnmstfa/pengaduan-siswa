@@ -10,6 +10,7 @@ use App\Models\Pengaduan;
 use App\Models\Tanggapan;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 
 
@@ -43,19 +44,26 @@ class TanggapanController extends Controller
      */
     public function store(Request $request)
     {
+        
+        $request->validate([
+            'foto' => 'required|image'
+        ]);
+
         DB::table('pengaduan')->where('id', $request->pengaduan_id)->update([
             'status'=> $request->status,
         ]);
-
-        $petugas_id = Auth::user()->id;
-
-        $data = $request->all();
-
-        $data['pengaduan_id'] = $request->pengaduan_id;
-        $data['petugas_id']=$petugas_id;
+        
+        $path_file = '/storage/tanggapan/';
+        $nama_file = 'tanggapan-' . Str::random(20) . '.' . $request->file('foto')->clientExtension();
+        $request->file('foto')->move(public_path($path_file), $nama_file);
 
         Alert::success('Berhasil', 'Pengaduan berhasil ditanggapi');
-        Tanggapan::create($data);
+        Tanggapan::create([
+            'pengaduan_id' => $request->pengaduan_id,
+            'petugas_id' => Auth::user()->id,
+            'tanggapan' => $request->tanggapan,
+            'path_foto' => $path_file . $nama_file,
+        ]);
         return redirect('admin/pengaduans');
     }
 
@@ -68,8 +76,9 @@ class TanggapanController extends Controller
     public function show($id)
     {
         $item = Pengaduan::with([
-            'details', 'user'
+            'details', 'user', 'tanggapan'
         ])->findOrFail($id);
+        // dd($item);
 
         return view('pages.admin.tanggapan.add',[
             'item' => $item

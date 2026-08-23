@@ -83,7 +83,6 @@ class MasyarakatController extends Controller
 
 
         $items = Pengaduan::where('user_nik', $user)->get();
-
         return view('pages.masyarakat.detail', [
             'items' => $items
         ]);
@@ -96,7 +95,7 @@ class MasyarakatController extends Controller
         'details', 'user'
         ])->findOrFail($id);
 
-        $tangap = Tanggapan::where('pengaduan_id',$id)->first();
+        $tangap = Tanggapan::where('pengaduan_id',$id)->latest()->first();
 
         return view('pages.masyarakat.show',[
         'item' => $item,
